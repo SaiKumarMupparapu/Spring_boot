@@ -1,0 +1,35 @@
+package com.Examole.demo.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.Examole.demo.Entity.Address;
+import com.Examole.demo.Entity.Employee;
+import com.Examole.demo.Repo.EmployeeRepo;
+
+public class EmpAdrsService {
+	@Autowired
+	private EmployeeRepo empRepo;
+	
+	public void saveEmplAdr() {
+		Employee e=new Employee();
+		e.setName("sai");
+		e.setSalary(123.00);
+		
+		e.setAdrs();
+		
+		Address a1=new Address();
+		a1.setCity("khammam");
+		a1.setState("TS");
+		a1.setCountry("Bharath");
+		
+		a1.setEmp(e);
+		
+		Address a2=new Address();
+		a2.setCity("Warengal");
+		a2.setState("TS");
+		a2.setCountry("Bharath");
+		a2.setAdrsType("permanent");
+		a2.setEmp(e);
+	}
+
+}

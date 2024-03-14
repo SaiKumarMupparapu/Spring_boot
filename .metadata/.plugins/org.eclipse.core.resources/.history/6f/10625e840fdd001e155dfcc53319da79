@@ -1,0 +1,28 @@
+package com.DB.jpa.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Service;
+
+import com.DB.jpa.Entity.Employee;
+import com.DB.jpa.Repo.EmpRepo;
+
+@Service
+public class EmpService {
+	
+	private EmpRepo erpo;
+    @Autowired
+	public EmpService(EmpRepo erpo) {
+		this.erpo = erpo;
+	}
+    
+    public void  getAllEmps() {
+    	@Query("")
+    	List<Employee> empsHQL = erpo.getEmpsHQL();
+    }
+	
+	
+
+}

@@ -1,0 +1,13 @@
+import org.slf4j.LoggerFactory;
+
+public class MsgService {
+	private org.slf4j.Logger logger=
+			LoggerFactory.getLogger(MsgService.class);
+	
+	public String getWelcomeMsg() {
+		logger.
+		String msg="welcome to ashokIt";
+		return msg;
+	}
+
+}

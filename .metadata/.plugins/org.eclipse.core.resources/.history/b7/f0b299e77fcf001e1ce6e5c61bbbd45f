@@ -1,0 +1,45 @@
+package in.ashokit;
+
+public class EmpServiceImp implements IEmpService {
+	private IEmpDao idao;
+
+	public void setIdao(IEmpDao idao) {
+		this.idao = idao;
+	}
+
+	@Override
+	public void save() {
+		// TODO Auto-generated method stub
+		if(idao.save())System.out.println("record inserted");
+		else System.out.println("record not inserted");
+	}
+
+	@Override
+	public void findById() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void finadAll() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update() {
+		int result = idao.update();
+		if(result>0)System.out.println("updated sucessfully");
+		else System.out.println("not updated sucessfully");	
+	}
+
+	@Override
+	public void delete() {
+		// TODO Auto-generated method stub
+		int result = idao.delete();
+		if(result>0)System.out.println("deleted sucessfully");
+		else System.out.println("not deleted sucessfully");	
+
+	}
+
+}

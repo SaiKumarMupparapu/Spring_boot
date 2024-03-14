@@ -1,0 +1,9 @@
+package com.Examole.demo.Entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Customer {
+
+	private Lon
+}

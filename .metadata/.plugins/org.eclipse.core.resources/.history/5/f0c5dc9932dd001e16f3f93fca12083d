@@ -1,0 +1,26 @@
+package com.Examole.demo;
+
+import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class PrdService {
+ 
+	private ProductRepo pr;
+    
+	@Autowired
+	public PrdService(ProductRepo pr) {
+		this.pr = pr;
+	}
+	
+	public void saveProduct() {
+		Product p=new Product();
+		p.setId(1);
+		p.setName("mouse");
+		p.setPrice(1000.0);
+		p.setCurrentDate(LocalDate.now());
+		
+		pr.save(p);
+		System.out.println("record saved");
+	}
+}

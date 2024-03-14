@@ -1,0 +1,9 @@
+package com.Examole.demo;
+
+import jakarta.persistence.Embeddable;
+
+@Embeddable
+public class PersonPk {
+
+	private Integer  
+}

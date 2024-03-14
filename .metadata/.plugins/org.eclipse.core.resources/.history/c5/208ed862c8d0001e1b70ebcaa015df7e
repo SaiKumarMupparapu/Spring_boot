@@ -1,0 +1,51 @@
+package in.ashokit;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+public class EmpDaoImp implements IEmpDao {
+	private JdbcTemplate jt;
+	private EmpMapper empMapper;
+		
+
+	public void setJt(JdbcTemplate jt,EmpMapper empMapper) {
+		this.jt = jt;
+		this.empMapper=empMapper;
+	}
+
+	@Override
+	public boolean insert() {
+		String sql="insert into emp values(?,?,?)";
+		int saved = jt.update(sql,1,"Ram",100000000);
+		return saved>0?true:false;
+	}
+
+	@Override
+	public boolean update(int id) {
+		String sql="update table emp set name=? where id=?";
+		int updated = jt.update(sql,"Sri dhar",id);
+		return updated>0?true:false;
+	}
+
+	@Override
+	public boolean delete(int id) {
+		String sql="delete from emp where id=?";
+		int deleted = jt.update(sql,id);
+		return deleted>0?true:false;
+	}
+
+	@Override
+	public List getById(int id) {
+		String sql="select * from emp where id=?";
+		List<Employee> empList = jt.query(sql,empMapper);
+		return empList;
+	}
+
+	@Override
+	public List getAll() {
+		String sql="select * from emp";
+		List<Employee> AllEmpList = jt.query(sql,empMapper);
+		return AllEmpList;
+	}
+
+}

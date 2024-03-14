@@ -1,0 +1,49 @@
+package in.ashokit;
+
+import java.util.List;
+
+public class EmpServiceImp implements IEmpService {
+	private IEmpDao empDao;
+	
+
+	public void setEmpDao(IEmpDao empDao) {
+		this.empDao = empDao;
+	}
+
+	@Override
+	public void add() {
+		boolean inserted = empDao.insert();
+		System.out.println(inserted?"inserted sucessfully":"not inserted");
+	}
+
+	@Override
+	public void modify(int id) {
+		boolean updated = empDao.update(id);
+		System.out.println(updated?"inserted sucessfully":"not inserted");
+	}
+
+	@Override
+	public void remove(int id) {
+		boolean deleted = empDao.delete(id);
+		System.out.println(deleted?"inserted sucessfully":"not inserted");
+	}
+
+	@Override
+	public void search(int id) {
+		List<Employee> empList = empDao.getById(id);
+		for(Employee e:empList) {
+			System.out.println("id :"+ e.getId()+"\nName :"+e.getName()+"\nSalary :"+e.getSalary());
+			
+		}
+	}
+
+	@Override
+	public void get() {
+		List<Employee> empList = empDao.getAll();
+		for(Employee e:empList) {
+			System.out.println("id :"+ e.getId()+"\nName :"+e.getName()+"\nSalary :"+e.getSalary());
+			
+		}
+	}
+
+}

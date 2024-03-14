@@ -1,0 +1,47 @@
+package in.ashokit;
+
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class IEMPDaoImpl implements IEmpDao{
+	private JdbcTemplate jt;
+	
+
+	public IEMPDaoImpl(JdbcTemplate jt) {
+		this.jt = jt;
+	}
+	// insert a record
+	@Override
+	public boolean save() {
+		jt.execute("insert into emp values(1,sai,600000)");
+		return true;
+			
+	}
+   // find record by id
+	@Override
+	public void findById() {
+		String sql="select * from emp where id=?";
+		
+	}
+    //get all records
+	@Override
+	public void finadAll() {
+		// TODO Auto-generated method stub
+		String sql="select * from emp";
+	}
+
+	@Override
+	public int update() {
+		// TODO Auto-generated method stub
+		String sql="update  emp set id=?,name=?,salary=? where id=?";
+		return jt.update(sql,2,"kumar",800000,1);
+		//if(update>0)System.out.println("updated sucessfully");
+		//else System.out.println("not updated sucessfully");		
+		
+	}
+	@Override
+	public int delete() {
+		return jt.update("delet from emp where id=?",);
+	}
+
+}

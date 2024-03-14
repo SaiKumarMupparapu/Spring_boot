@@ -1,0 +1,115 @@
+package com.example.demo.Service;
+
+import com.example.demo.Repo.EmployeeRepo;
+
+@Service
+public class EmpService {
+	private EmployeeRepo empr;
+
+	public EmpService(EmployeeRepo empr) {
+		this.empr = empr;
+	}
+
+	// save a single employee details
+
+	public void saveEmp(Integer id, String name, Double salary) {
+		Employee emp = new Employee();
+		emp.setId(id);
+		emp.setName(name);
+		emp.setSalary(salary);
+
+		empr.save(emp);
+		System.out.println("recprds saved");
+	}
+
+	// save list of employees
+
+	public void saveEmp() {
+		Employee e1 = new Employee();
+		e1.setId(2);
+		e1.setName("kumar");
+		e1.setSalary(2345.00);
+
+		Employee e2 = new Employee();
+		e2.setId(3);
+		e2.setName("srinu");
+		e2.setSalary(234.00);
+
+		Employee e3 = new Employee();
+		e3.setId(4);
+		e3.setName("vijay");
+		e3.setSalary(1345.00);
+
+		List<Employee> empList = Arrays.asList(e1, e2, e3);
+
+		empr.saveAll(empList);
+
+		System.out.println("employees details saved");
+	}
+
+	// find a employee based on primary key
+
+	public void getEmployee(Integer id) {
+
+		// optional is introduced to eliminate null pointer exception
+		// it is a container it may or may not contain non-null value
+		Optional<Employee> emp = empr.findById(id);
+
+		if (emp.isPresent()) {
+			Employee employee = emp.get();
+			System.out.println(employee);
+		} else {
+			System.out.println("no record avilable");
+		}
+
+	}
+
+	public void getAllEmp(List<Integer> ids) {
+		List<Employee> allById = empr.findAllById(ids);
+		allById.forEach(System.out::println);
+	}
+
+	public void getAllEmpl() {
+		List<Employee> allemp = empr.findAll();
+		allemp.forEach(System.out::println);
+	}
+
+	public void checkRedord(Integer id) {
+		boolean existsById = empr.existsById(id);
+		if (existsById)
+			System.out.println("record is present");
+		else
+			System.out.println("record is not present");
+	}
+
+	public void totRecords() {
+		System.out.println(empr.count());
+	}
+
+	public void delById(Integer id) {
+		empr.deleteById(id);
+		System.out.println("record is deleted");
+	}
+
+	public void deleteAllByIds(Iterable<Integer> ids) {
+		empr.deleteAllById(ids);
+		System.out.println("records deleted");
+	}
+
+	public void delEmp(Employee emp) {
+		empr.delete(emp);
+		System.out.println("records deleted");
+
+	}
+
+	public void delemps(Iterable<Employee> emp) {
+		empr.deleteAll(emp);
+		System.out.println("records deleted");
+	}
+
+	public void delAll() {
+		empr.deleteAll();
+		System.out.println(" all records deleted");
+	}
+
+}

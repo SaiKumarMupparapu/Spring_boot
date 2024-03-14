@@ -1,0 +1,16 @@
+package com.Examole.demo.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Address {
+
+	@Id
+	@GeneratedValue
+	private Integer Aid;
+	private String city;
+	private String state;
+	
+	private Integer eid;
+}

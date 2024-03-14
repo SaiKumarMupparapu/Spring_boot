@@ -1,0 +1,16 @@
+package com.DB.jpa.Repo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.DB.jpa.Entity.Applicant;
+
+public interface ApplicantRepo extends JpaRepository<Applicant,Integer> {
+
+	List<Applicant> findByName(String name);
+
+	List<Applicant> findByAge(Integer age);
+
+
+}

@@ -1,0 +1,11 @@
+
+
+public class MsgRestController {
+    private MsgService msgserv;
+
+	public MsgRestController(MsgService msgserv) {
+		super();
+		this.msgserv = msgserv;
+	}
+    
+}

@@ -1,0 +1,4 @@
+@restc
+public class MsgRestController {
+
+}

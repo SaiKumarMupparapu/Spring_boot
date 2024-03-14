@@ -1,0 +1,21 @@
+package com.Examole.demo;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmpsService {
+	private EmpRepo er;
+
+	public EmpsService(EmpRepo er) {
+		this.er = er;
+	}
+
+	public void saveEmp() {
+		Emps e=new Emps();
+		e.setName("sai kumar");
+		e.setSalary(1234.0);
+		
+		er.save(e);
+	}
+
+}

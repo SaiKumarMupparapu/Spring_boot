@@ -1,0 +1,14 @@
+package com.example.demo;
+import org.springframework.beans.factory.annotation.Autowired;
+@RestController
+public class MsgRestController {
+    private MsgService msgserv;
+    @Autowired
+	public MsgRestController(MsgService msgserv) {
+		this.msgserv = msgserv;
+	}
+    @GetMapping
+    public String getMsg() {
+    	return msgserv.getWelcomeMsg();
+    }
+}

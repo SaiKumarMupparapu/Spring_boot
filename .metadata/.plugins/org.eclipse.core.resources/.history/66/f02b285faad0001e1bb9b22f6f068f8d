@@ -1,0 +1,13 @@
+package in.ashokit;
+
+import java.util.List;
+
+public interface IEmpDao {
+	boolean save();
+	void findById();
+	List<String> finadAll();
+	int update();
+	int delete();
+	
+
+}

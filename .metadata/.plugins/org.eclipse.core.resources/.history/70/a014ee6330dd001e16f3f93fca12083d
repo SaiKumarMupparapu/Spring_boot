@@ -1,0 +1,7 @@
+package com.Examole.demo;
+
+public class PrdService {
+ 
+	private ProductRepo pr;
+	
+}

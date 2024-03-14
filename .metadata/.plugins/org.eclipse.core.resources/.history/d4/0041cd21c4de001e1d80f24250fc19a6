@@ -1,0 +1,17 @@
+package com.Examole.demo.Repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+
+import com.Examole.demo.Entity.Emp;
+
+import jakarta.transaction.Transactional;
+
+public interface EmpRepo extends JpaRepository<Emp, Integer> {
+
+//	@Transactional
+//	@Modifying
+//	@Query(value = "insert into Emp(name,salary) values(:name,:salary)" )
+//	void insert(String name,Double salary);
+}

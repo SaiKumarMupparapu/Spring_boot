@@ -1,0 +1,30 @@
+package com.Examole.demo.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.Examole.demo.Entity.Employee;
+import com.Examole.demo.Repo.EmployeeRepo;
+
+@Service
+public class EmployeeService {
+
+	private EmployeeRepo er;
+
+	@Autowired
+	public EmployeeService(EmployeeRepo er) {
+		this.er = er;
+	}
+	
+	public void save
+	
+	public void calEmpStoredProcedure() {
+		List<Employee> empList = er.executeStoredProcedure();
+	 
+		empList.forEach(System.out::println);
+		
+	}
+	
+}

@@ -1,0 +1,9 @@
+package in.ashokit;
+
+public interface IEmpDao {
+	void save();
+	void findById();
+	void finadAll();
+	void update();
+
+}

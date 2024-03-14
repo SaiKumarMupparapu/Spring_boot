@@ -1,0 +1,11 @@
+import org.apache.commons.logging.LogFactory;
+
+public class MsgService {
+	LoggerFactory.getLogger(MsgService.class);
+	
+	public String getWelcomeMsg() {
+		String msg="welcome to ashokIt";
+		return msg;
+	}
+
+}

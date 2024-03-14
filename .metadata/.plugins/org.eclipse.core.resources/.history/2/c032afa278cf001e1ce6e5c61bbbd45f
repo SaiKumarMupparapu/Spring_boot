@@ -1,0 +1,9 @@
+package in.ashokit;
+
+public interface IEmpService {
+	void save();
+	void findById();
+	void finadAll();
+	
+
+}

@@ -1,0 +1,40 @@
+package in.ashokit;
+
+public class EmpServiceImp implements IEmpService {
+	private IEmpDao dao;
+	
+
+	public void setDao(IEmpDao dao) {
+		this.dao = dao;
+	}
+
+	@Override
+	public void insert() {
+		dao.save()
+	}
+
+	@Override
+	public void getById() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void getAll() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

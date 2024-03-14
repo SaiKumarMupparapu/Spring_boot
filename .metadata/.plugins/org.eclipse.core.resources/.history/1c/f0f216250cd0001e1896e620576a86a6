@@ -1,0 +1,11 @@
+package in.ashokit;
+
+public interface IEmpDao {
+	boolean insert();
+	void findById();
+	void finadAll();
+	int update();
+	int delete();
+	
+
+}

@@ -1,0 +1,18 @@
+package com.Examole.demo.Entity;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Customer {
+
+	@Id
+	@GenericGenerator(name="cust_Id",strategy = "com.Examole.demo.CustomGenerator.CustimizedIdGenerator")
+	
+	private String cid;
+	private String name;
+
+	
+}

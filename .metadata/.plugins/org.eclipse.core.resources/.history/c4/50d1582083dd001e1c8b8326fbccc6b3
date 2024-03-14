@@ -1,0 +1,14 @@
+package com.Examole.demo;
+
+
+
+public class CustomIdGenerator imp {
+
+    private static final String PREFIX = "OD";
+    
+
+  
+
+}
+
+

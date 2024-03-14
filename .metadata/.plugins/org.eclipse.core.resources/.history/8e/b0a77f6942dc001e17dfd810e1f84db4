@@ -1,0 +1,9 @@
+public class MsgService {
+	private Logger logger=LoggerFactory.getLogger(MsgService.class);
+	
+	public String getWelcomeMsg() {
+		String msg="welcome to ashokIt";
+		return msg;
+	}
+
+}

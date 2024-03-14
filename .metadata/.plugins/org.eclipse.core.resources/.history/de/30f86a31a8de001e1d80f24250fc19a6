@@ -1,0 +1,39 @@
+package com.Jpa.Service;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.Jpa.Entity.Person;
+import com.Jpa.Repo.personRepo;
+
+
+@Service
+public class PersonService {
+	
+	@Autowired
+	private personRepo pr;
+	
+	public void savePerson() {
+		Person p=new Person();
+		p.setName("sai");
+		String resumePath="";
+		String photoPath="";
+
+		try {
+			Path of = Path.of(resumePath);
+			byte[] resumeData = Files.readAllBytes(of);
+			
+			p.setResume(resumeData);
+			Path phtPath = Path.of(photoPath);
+			
+			
+		}catch (Exception e) {
+           e.printStackTrace();
+		}
+	}
+
+}

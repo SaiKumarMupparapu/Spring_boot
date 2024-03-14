@@ -1,0 +1,5 @@
+package com.Examole.demo.Repo;
+
+public interface PersonRepo extends {
+
+}

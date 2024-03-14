@@ -1,0 +1,11 @@
+package com.DB.jpa.Repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.DB.jpa.Entity.Applicant;
+
+public interface ApplicantRepo extends JpaRepository<Applicant,Integer> {
+
+	void findByAge(Integer age);
+
+}

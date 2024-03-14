@@ -1,0 +1,10 @@
+
+public class MsgService {
+	lo
+	
+	public String getWelcomeMsg() {
+		String msg="welcome to ashokIt";
+		return msg;
+	}
+
+}

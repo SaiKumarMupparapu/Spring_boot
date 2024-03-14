@@ -1,0 +1,13 @@
+package com.Jpa.Entity;
+
+import java.util.Arrays;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
+@Entity
+public class Person {
+
+	
+
+}

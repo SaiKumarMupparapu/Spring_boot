@@ -1,0 +1,10 @@
+package in.ashokit;
+
+public interface IEmpService {
+	void insert();
+	void getById();
+	List<> getAll();
+	void update();
+	void delete();
+
+}

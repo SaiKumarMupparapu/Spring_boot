@@ -1,0 +1,9 @@
+package com.DB.jpa.Service;
+
+import com.DB.jpa.Repo.EmpRepo;
+
+public class EmpService {
+	
+	private EmpRepo e
+
+}

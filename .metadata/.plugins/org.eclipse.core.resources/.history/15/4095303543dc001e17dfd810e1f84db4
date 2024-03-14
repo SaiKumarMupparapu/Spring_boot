@@ -1,0 +1,10 @@
+import org.springframework.beans.factory.annotation.Autowired;
+@RestController
+public class MsgRestController {
+    private MsgService msgserv;
+    @Autowired
+	public MsgRestController(MsgService msgserv) {
+		this.msgserv = msgserv;
+	}
+    public 
+}

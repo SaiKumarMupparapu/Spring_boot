@@ -1,0 +1,9 @@
+package com.Examole.demo;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Person {
+
+	private 
+}

@@ -1,0 +1,21 @@
+package com.Examole.demo.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.Examole.demo.Entity.Address;
+import com.Examole.demo.Entity.Employee;
+import com.Examole.demo.Repo.EmployeeRepo;
+
+public class EmpAdrsService {
+	@Autowired
+	private EmployeeRepo empRepo;
+	
+	public void saveEmplAdr() {
+		Employee e=new Employee();
+		e.setName("sai");
+		e.setSalary(123.00);
+		
+		Address a1
+	}
+
+}

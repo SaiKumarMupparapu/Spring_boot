@@ -1,0 +1,13 @@
+package com.Examole.demo.Repo;
+
+import java.util.List;
+import java.util.Objects;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.Examole.demo.Entity.PersonPs;
+
+public interface PersonRepo extends JpaRepository<PersonPs,Long> {
+	
+}

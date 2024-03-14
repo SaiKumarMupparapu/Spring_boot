@@ -1,0 +1,7 @@
+package com.DB.jpa.Repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ApplicantRepo Extends JpaRepository<Applicant,Integer> {
+
+}
