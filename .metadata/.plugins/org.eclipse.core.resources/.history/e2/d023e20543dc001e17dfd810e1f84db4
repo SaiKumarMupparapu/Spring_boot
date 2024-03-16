@@ -1,6 +1,0 @@
-
-
-public class MsgRestController {
-    private MsgService msgserv;
-    
-}

@@ -1,7 +1,0 @@
-package com.example.demo.Repo;
-
-import com.example.demo.Entity.Employee;
-
-public interface EmployeeRepo extends CurdRepository<Employee ,Integer> {
-
-}

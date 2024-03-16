@@ -1,8 +1,0 @@
-
-public class MsgService {
-	
-	public void getMsg() {
-		
-	}
-
-}

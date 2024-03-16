@@ -1,9 +1,0 @@
-
-public class MsgService {
-	
-	public String getWelcomeMsg() {
-		String msg="welcome to ashokIt"
-		return msg;
-	}
-
-}
