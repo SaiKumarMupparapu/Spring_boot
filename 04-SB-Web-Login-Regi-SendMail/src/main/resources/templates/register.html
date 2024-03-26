@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+     rel="stylesheet" 
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+      <style>
+        form{
+            width: 300px;
+        }
+      </style>
+  </head>
+  <body>
+    <div class="container">
+        <table class="table">
+			<div>
+				<p th:text="${smsg}" style="color: green;"></p>
+				<p th:text="${emsg}" style="color: red;"></p>
+			</div>
+            <form th:Object="${userObj}" th:action="@{/register}" method="post">
+                <tr>
+                    <td>UserName</td>
+                    <td><input type="text"  th:feild="*{name}" 	required></td> 
+                </tr>
+                <tr>
+                    <td>Email</td>
+                <td>  <input type="email" required 	th:feild="*{email}"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                <td>  <input type="password"  required th:feild="*{pswd}"></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                <td>  <input type="number"  required 	th:feild="*{phno}"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="register" class="btn btn-success"></td>
+                </tr>
+
+				<tr><td><a href="/login">Login</a> </td></tr>
+            </form> 
+			    
+       
+        </table>
+        
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

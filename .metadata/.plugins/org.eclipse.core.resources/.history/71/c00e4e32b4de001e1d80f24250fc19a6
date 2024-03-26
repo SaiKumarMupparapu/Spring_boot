@@ -1,5 +1,0 @@
-package com.Examole.demo.Service;
-@Service
-public class EmployeeService {
-
-}
